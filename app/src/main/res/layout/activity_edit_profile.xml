@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    tools:context=".tt.ui.activities.EditProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_toolbar_back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24"/>
+            <TextView
+                android:id="@+id/tv_toolbar_title_edit_prof"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile Setting"
+                android:textColor="@color/white"
+                android:layout_marginLeft="50dp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!--Scroll Layout-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <!-- Layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <!-- <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.viewpager.widget.ViewPager>-->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/image" />
+
+            <ImageView
+                android:id="@+id/iv_edit_cover_photo"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_circle_grey"
+                android:src="@drawable/ic_baseline_edit_24" />
+
+            <!--Profile Layout-->
+            <TextView
+                android:id="@+id/tv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:text="Profile"
+                android:textColor="@color/primary_dark"
+                android:textSize="50px"
+                android:textStyle="bold" />
+
+            <!--Profile Name-->
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Name"
+                android:textColor="#000000"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/tv_name_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/myrect"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:elevation="2dp"
+                android:padding="10dp"
+                android:text="PayTiOo2021@gmail.com"
+                android:textColor="@color/primary_dark"
+                android:textSize="40px"
+                android:textStyle="bold"></TextView>
+
+            <!--android:shadowDy="5"-->
+
+            <!--Basic Info-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_basic_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Basic Information"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="50px"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_basic_info_edit"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:background="@drawable/bg_circle_grey"
+                    android:gravity="center"
+                    android:text="Edit"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold" />
+
+                <!--<Button
+                    android:id="@+id/btn_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Edit"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/bg_circle_grey"
+                    android:layout_marginLeft="130dp"
+                    />-->
+            </LinearLayout>
+
+            <!--email-->
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Email"
+                android:textColor="#000000"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/tv_email_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:text="PayTiOo2021@gmail.com"
+                android:textColor="@color/primary_dark"
+                android:textSize="40px"></TextView>
+
+            <!--phone-->
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Phone"
+                android:textColor="#000000"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/tv_phone_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:backgroundTint="#F58B00"
+                android:text="09883w"
+                android:textSize="40px"
+                app:backgroundTint="#F58B00"></TextView>
+
+
+            <!--Postal Code-->
+
+            <TextView
+                android:id="@+id/tv_postal_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Postal-code/Zip-code"
+                android:textColor="#000000"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/tv_postal_code_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:backgroundTint="#F58B00"
+                android:text="1111"
+                android:textSize="40px"
+                app:backgroundTint="#F58B00"></TextView>
+
+            <!--Location-->
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Location"
+                android:textColor="#000000"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/tv_location_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:backgroundTint="#F58B00"
+                android:text="Yangon/Myanmar"
+                android:textSize="40px"
+                app:backgroundTint="#F58B00"></TextView>
+
+            <!--foundation history-->
+            <TextView
+                android:id="@+id/tv_foundation_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Foundation History"
+                android:textColor="#000000"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/tv_foundation_history_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#F58B00"
+                android:text="Write somthing about foundation"
+                android:scrollbars="vertical"
+                android:textSize="40px"
+                app:backgroundTint="#F58B00"></TextView>
+
+            <!--website link-->
+            <TextView
+                android:id="@+id/tv_website_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:text="Website Link"
+                android:textColor="@color/primary_dark"
+                android:textSize="50px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_link_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Link"
+                android:textColor="#000000"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/tv_website_link_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/myrect"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:elevation="2dp"
+                android:padding="10dp"
+                android:shadowDy="5"
+                android:text="http://payjjjjj.com"
+                android:textColor="@color/primary_dark"
+                android:textSize="40px"
+                android:textStyle="bold"></TextView>
+
+            <!--Google Map-->
+            <TextView
+                android:id="@+id/tv_google_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:text="Google Map"
+                android:textColor="@color/primary_dark"
+                android:textSize="50px"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/image" />
+
+
+        </LinearLayout>
+        <!--end linear layout-->
+
+
+    </ScrollView>
+    <!--end scroll view-->
+
+
+</LinearLayout>

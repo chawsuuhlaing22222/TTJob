@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DEE2E6"
+    tools:context=".tt.ui.activities.EditProfileSettingConstraintActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginBottom="10dp"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_toolbar_back_arrow_edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/tv_edit_cover_profile"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Edit Cover Profile"
+                android:textColor="@color/white" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/sl_cover_photo_list"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="50dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="true"
+
+                />
+            <!--app:sliderAutoCycleDirection="back_and_forth"-->
+           <!-- <ImageView
+                android:id="@+id/iv_cover_photo_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/image"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />-->
+
+
+            <ImageView
+                android:id="@+id/iv_edit_cover_photo"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_circle_grey"
+                android:src="@drawable/ic_baseline_edit_24"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sl_cover_photo_list"
+                 />
+
+            <!--Profile Layout-->
+            <TextView
+                android:id="@+id/tv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Profile"
+                android:textColor="@color/primary_dark"
+                android:textSize="50px"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_edit_cover_photo"
+                 />
+
+            <!--Profile Name-->
+            <TextView
+                android:id="@+id/tv_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="Name"
+                android:textColor="#000000"
+                android:textSize="40px"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profile"
+                />
+
+            <!--Profile Name value-->
+            <TextView
+                android:id="@+id/tv_profile_name_value_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/myrect"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:padding="20dp"
+                android:text="PayTiOo2021@gmail.com"
+                android:textColor="@color/primary_dark"
+                android:textSize="40px"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profile_name">
+
+            </TextView>
+
+            <!--Basic Info-->
+            <TextView
+                android:id="@+id/tv_basic_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="20dp"
+                android:text="Basic Information"
+                android:layout_marginEnd="80dp"
+                android:textColor="@color/primary_dark"
+                android:textSize="50px"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/btn_basic_info_edit_constraint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profile_name_value_constraint" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_basic_info_edit_constraint"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_circle_grey"
+                android:gravity="center"
+                android:text="Edit"
+                android:textColor="@color/primary_dark"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profile_name_value_constraint" />
+
+            <!--email-->
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Email"
+                android:textColor="#000000"
+                android:textSize="40px"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_basic_info_edit_constraint"
+              />
+
+
+            <!--email value-->
+            <TextView
+                android:id="@+id/tv_email_value_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+               android:layout_marginTop="15dp"
+                android:text="PayTiOo2021@gmail.com"
+                android:textColor="@color/primary_dark"
+                android:textSize="40px"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email"
+                app:layout_constraintLeft_toLeftOf="parent"></TextView>
+
+
+           <!--phone-->
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Phone"
+                android:textColor="#000000"
+                android:textSize="40px"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email_value_constraint"
+                />
+
+
+            <!--phone value-->
+            <TextView
+                android:id="@+id/tv_phone_value_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="09875444"
+                android:textColor="@color/primary_dark"
+                android:textSize="40px"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone"
+                app:layout_constraintLeft_toLeftOf="parent"></TextView>
+
+
+            <!--postalcode-->
+            <TextView
+                android:id="@+id/tv_postalcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Postal-code / Zip-code"
+                android:textColor="#000000"
+                android:textSize="40px"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone_value_constraint"
+                />
+
+            <!--postalcode value-->
+            <TextView
+                android:id="@+id/tv_postalcode_value_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="09875444"
+                android:textColor="@color/primary_dark"
+                android:textSize="40px"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/tv_postalcode"
+                app:layout_constraintLeft_toLeftOf="parent"></TextView>
+
+
+            <!--Location-->
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:text="Location"
+                android:textColor="#000000"
+                android:textSize="40px"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_postalcode_value_constraint"/>
+
+            <!--Location value-->
+            <TextView
+                android:id="@+id/tv_location_value_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Yangon/Myanmar"
+                android:textSize="40px"
+                android:textStyle="bold"
+                android:textColor="@color/primary_dark"
+                app:layout_constraintTop_toBottomOf="@+id/tv_location"
+                app:layout_constraintLeft_toLeftOf="parent"
+                ></TextView>
+
+
+            <!--foundation history-->
+            <TextView
+                android:id="@+id/tv_foundation_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:text="Foundation History"
+                android:textColor="#000000"
+                android:textSize="40px"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_location_value_constraint"/>
+
+            <!--foundation history value-->
+            <TextView
+                android:id="@+id/tv_foundation_history_value_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Write somthing about foundation"
+                android:scrollbars="vertical"
+                android:textSize="40px"
+                android:textColor="@color/primary_dark"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_foundation_history"></TextView>
+
+
+
+            <!--website link-->
+            <TextView
+                android:id="@+id/tv_website_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:text="Website Link"
+                android:textColor="@color/primary_dark"
+                android:textSize="50px"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_foundation_history_value_constraint"/>
+
+            <TextView
+                android:id="@+id/tv_link_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:text="Link"
+                android:textColor="#000000"
+                android:textSize="40px"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_website_link"/>
+
+            <TextView
+                android:id="@+id/tv_website_link_value_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/myrect"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:elevation="2dp"
+                android:padding="20dp"
+                android:text="http://payjjjjj.com"
+                android:textColor="@color/primary_dark"
+                android:textSize="40px"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_link_value"></TextView>
+
+
+            <!--Google Map-->
+            <TextView
+                android:id="@+id/tv_google_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:text="Google Map"
+                android:textColor="@color/primary_dark"
+                android:textSize="50px"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_website_link_value_constraint"/>
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map_google_map"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:clickable="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_google_map"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+   <!-- </ScrollView>-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

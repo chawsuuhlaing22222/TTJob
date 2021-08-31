@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <!--Above is original-->
+
+    <color name="blue">#ADD8E6</color>
+    <color name="primary">#292929</color>
+    <color name="primary_dark">#212121</color>
+    <color name="title_color">#071957</color>
+    <color name="primary_light">#C5CAE9</color>
+    <color name="accent">#0F0F0F</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_dark">#E6E4DEDE</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="grey">#808080</color>
+    <color name="red">#3C3E3F</color>
+    <color name="transparent_60_percent">#60CEC9C9</color>
+    <color name="red_color">#F10A0A</color>
+
+    <color name="transparent_primary">#5C48A5E4</color>
+
+    <color name="selected_color">#E48748</color>
+
+    <color name="intro_video_background">#57b8f4</color>
+    <color name="intro_question_background">#f48757</color>
+    <color name="intro_competition_background">#f45d57</color>
+
+    <color name="exo_transparent">#CC000000</color>
+    <color name="appbar_end_color">#FF9800</color>
+
+    <color name="opponent_action_bg_end_color">#F08B59</color>
+    <color name="opponent_bg_middle_color">#E27A54</color>
+    <color name="opponent_action_bg_start_color">#E05153</color>
+
+
+    <color name="opponent_bg_end_color">#8E62D3</color>
+    <color name="opponent_bg_start_color">#64B3D7</color>
+    <color name="opponent_action_accept_bg_end_color">#5DE7D2</color>
+    <color name="opponent_action_accept_bg_start_color">#4C6EDC</color>
+    <color name="opponent_finding_bg_end_color">#44A9CD</color>
+    <color name="opponent_finding_bg_start_color">#257B91</color>
+    <color name="green">#8AEDE9</color>
+
+    <color name="appbar_color">#57B8F4</color>
+    <color name="dark_yellow">#FDAF25</color>
+    <color name="pink">#F95733</color>
+    <color name="yellow">#FDE014</color>
+    <color name="question_color">#DEBAEA</color>
+    <color name="answer_color">#EBE2EE</color>
+
+    <color name="transparent">#33000000</color>
+    <color name="transparent_66">#66160000</color>
+    <color name="view_color">#F0F0F0</color>
+
+    <color name="donation_detail_background">#E4E4E4</color>
+
+    <color name="partner_color">#402F65</color>
+    <color name="profile_border_color">#0096FB</color>
+    <color name="comment_background_color">#EFEFEF</color>
+
+
+
+    <color name="menu_color">#FFA90A</color>
+</resources>

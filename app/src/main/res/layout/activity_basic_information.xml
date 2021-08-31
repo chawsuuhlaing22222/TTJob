@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".tt.ui.activities.BasicInformationActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_toolbar_back_arrow_basic_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24"/>
+            <TextView
+                android:id="@+id/tv_toolbar_title"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Basic Information"
+                android:textColor="@color/white"
+                android:layout_marginLeft="50dp"/>
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:textColor="#F58B00"
+                android:layout_marginLeft="150dp"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_basic_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="Basic Information"
+            android:textStyle="bold"
+            android:textSize="50px"
+            android:textColor="@color/primary_dark"/>
+
+        <!--Email-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Email"
+                android:textSize="40px"
+                android:textColor="#000000"/>
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="20dp"
+                android:textSize="40px"
+                android:text="PayTiOo2021@gmail.com"
+                android:textStyle="bold"
+                app:backgroundTint="#F58B00"
+                android:backgroundTint="#F58B00"
+                >
+            </EditText>
+        </LinearLayout>
+
+        <!--Phone-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Phone"
+                android:textSize="40px"
+                android:textColor="#000000"/>
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="20dp"
+                android:textSize="40px"
+                android:text="09883w"
+                app:backgroundTint="#F58B00"
+                android:backgroundTint="#F58B00"
+                >
+            </EditText>
+        </LinearLayout>
+
+        <!--Postal Code-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_postal_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Postal-code/Zip-code"
+                android:textSize="40px"
+                android:textColor="#000000"/>
+
+            <EditText
+                android:id="@+id/et_postal_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="20dp"
+                android:textSize="40px"
+                android:text="1111"
+                app:backgroundTint="#F58B00"
+                android:backgroundTint="#F58B00"
+                >
+            </EditText>
+        </LinearLayout>
+
+        <!--Location-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Location"
+                android:textSize="40px"
+                android:textColor="#000000"/>
+
+            <EditText
+                android:id="@+id/et_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="20dp"
+                android:textSize="40px"
+                android:text="Yangon/Myanmar"
+                app:backgroundTint="#F58B00"
+                android:backgroundTint="#F58B00"
+                >
+            </EditText>
+        </LinearLayout>
+
+
+        <!--foundation history-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_foundation_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Foundation History"
+                android:textSize="40px"
+                android:textColor="#000000"/>
+
+            <EditText
+                android:id="@+id/et_foundation_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="20dp"
+                android:textSize="40px"
+                android:text="Write somthing about foundation"
+                app:backgroundTint="#F58B00"
+                android:backgroundTint="#F58B00"
+                >
+            </EditText>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

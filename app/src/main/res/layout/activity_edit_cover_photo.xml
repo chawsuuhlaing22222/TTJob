@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".tt.ui.activities.EditCoverPhotoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_toolbar_back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24"/>
+            <TextView
+                android:id="@+id/tv_edit_cover_profile"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Edit Cover Profile"
+                android:textColor="@color/white"
+                android:layout_marginLeft="50dp"/>
+
+            <TextView
+                android:id="@+id/tv_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload"
+                android:textColor="#F58B00"
+                android:layout_marginLeft="150dp"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/image" />
+
+    <!--description-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="@color/primary_dark"
+            android:layout_marginBottom="10dp"
+            />
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:paddingBottom="20dp"
+            android:textSize="40px"
+            android:text="PayTiOo2021@gmail.com"
+            android:textStyle="bold"
+            app:backgroundTint="#F58B00"
+            android:backgroundTint="#F58B00"
+            />
+
+        <TextView
+            android:id="@+id/tv_cover_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cover Photos"
+            android:textColor="@color/primary_dark"
+
+            />
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gvCoverPhotos"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:columnWidth="150dp"
+        android:numColumns="2"
+        android:listSelector="@drawable/grid_view_background"
+
+         />
+
+    <!--notice-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_pick_cover_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pick"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_circle_gold"
+           />
+
+        <TextView
+            android:id="@+id/tv_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:textColor="@color/primary_dark"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_note_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You can upload at most 4 photos"
+            android:textColor="@color/primary_dark"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
