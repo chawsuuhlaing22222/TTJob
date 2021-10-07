@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Job</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="currenylist">
+        <item>London</item>
+        <item>Paris</item>
+        <item>Singapore</item>
+        <item>New York</item>
+        <item>Istanbul</item>
+        <item>Dubai</item>
+        <item>Kuala Lumpur</item>
+        <item>Hong Kong</item>
+        <item>Barcelona</item>
+
+    </string-array>
+    <string name="title_activity_update_maps">UpdateMapsActivity</string>
 </resources>

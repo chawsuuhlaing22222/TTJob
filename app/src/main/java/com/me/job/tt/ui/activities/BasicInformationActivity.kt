@@ -1,21 +1,15 @@
 package com.me.job.tt.ui.activities
 
-import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.me.job.R
-import com.me.job.tt.utils.ConfigUtils
 import kotlinx.android.synthetic.main.activity_basic_information.*
-import android.content.Intent
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.me.job.tt.data.remote.request.FoundationInfoRequest
 import com.me.job.tt.data.remote.request.FoundationProfileBasicInfo
 import com.me.job.tt.data.remote.request.FoundationProfileBasicInfoUpdateRequest
 import com.me.job.tt.data.remote.response.FoundationBasicInfoUpdateResponse
-import com.me.job.tt.data.remote.response.FoundationDataResponse
 import com.me.job.tt.viewModels.FoundationInfoViewModel
 import kotlinx.android.synthetic.main.activity_edit_profile.*
 import kotlinx.android.synthetic.main.activity_edit_profile_setting_constraint.*

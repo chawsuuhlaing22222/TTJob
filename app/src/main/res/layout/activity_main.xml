@@ -77,4 +77,63 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_website_edit"
      />
 
+    <Button
+        android:id="@+id/btn_load_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="558dp"
+        android:text="Recyclar Load More"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_recycle_vew"
+        />
+
+    <Button
+        android:id="@+id/btn_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="558dp"
+        android:text="Currency Exchange"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_load_more"
+        />
+
+    <Button
+        android:id="@+id/btn_motion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="558dp"
+        android:text="Motion Test"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_currency"
+        />
+
+    <Button
+        android:id="@+id/btn_motiontest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="558dp"
+        android:text="Motion Test1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_motion"
+        />
+
+    <Button
+        android:id="@+id/btn_motiontest1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="558dp"
+        android:text="Motion Test2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_motiontest"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

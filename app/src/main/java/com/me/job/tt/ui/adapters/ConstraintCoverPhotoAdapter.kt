@@ -1,18 +1,39 @@
 package com.me.job.tt.ui.adapters
 
 import android.content.Context
-import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
 import com.me.job.R
 import com.me.job.tt.data.remote.response.CoverPhotoUpdateDataResponse
-import com.squareup.picasso.Picasso
+import com.me.job.tt.ui.delegate.EditCoverPhotoDelegate
+import com.me.job.tt.viewHolder.BaseViewHolder
+import com.me.job.tt.viewHolder.CoverPhotoUpdateViewHolder
 import kotlinx.android.synthetic.main.image_entry.view.*
 
-class ConstraintCoverPhotoAdapter: BaseAdapter {
+class ConstraintCoverPhotoAdapter(context:Context,var mdelegate: EditCoverPhotoDelegate): BaseRecyclerAdapter<CoverPhotoUpdateViewHolder, CoverPhotoUpdateDataResponse>(context) {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): BaseViewHolder<CoverPhotoUpdateDataResponse> {
+        val view = mLayoutInflator.inflate(R.layout.image_entry, parent, false)
+        return CoverPhotoUpdateViewHolder(view, mdelegate)
+    }
 
-    var coverPhotoList:ArrayList<CoverPhotoUpdateDataResponse>
+    override fun onBindViewHolder(
+        holder: BaseViewHolder<CoverPhotoUpdateDataResponse>,
+        position: Int
+    ) {
+        super.onBindViewHolder(holder, position)
+        holder.itemView.ib_delete.setOnClickListener {
+
+           mData!!.removeAt(position)
+            mdelegate.onCoverPhotoClick(mData!!.get(position))
+            notifyDataSetChanged()
+              //mdelegate.onClick(position)
+        }
+
+    }
+
+    /*var coverPhotoList:ArrayList<CoverPhotoUpdateDataResponse>
     var context: Context? = null
 
     constructor(context: Context, coverPhotoList: ArrayList<CoverPhotoUpdateDataResponse>):super() {
@@ -51,5 +72,5 @@ class ConstraintCoverPhotoAdapter: BaseAdapter {
 
         Picasso.get().load(coverPhoto?.url).fit().into(coverView.iv_cover_photo)
         return coverView
-    }
+    }*/
 }

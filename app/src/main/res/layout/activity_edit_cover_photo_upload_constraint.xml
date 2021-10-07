@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tt.ui.activities.EditCoverPhotoUploadConstraintActivity">
+    tools:context=".tt.ui.activities.FoundationEditCoverPhotoUploadActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar_edit_cvphoto"
@@ -50,14 +50,58 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
         >
-            <ImageView
-                android:id="@+id/iv_coverphoto_slide"
+            <RelativeLayout
+                android:id="@+id/relativeLayout_setting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                android:src="@drawable/image"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/sl_cover_photo_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="50dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorSelectedColor="#5A5A5A"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="1"
+                    app:sliderStartAutoCycle="true"
+                    />
+
+                <TextView
+                    android:id="@+id/txtThemeDescription_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="200dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Simple application that shows how to use marquee, with a long text"
+                    android:textColor="#ff4500" />
+                <ImageView
+                    android:id="@+id/iv_edit_cover_photo"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="-10dp"
+                    android:background="@drawable/bg_circle_img"
+                    android:src="@drawable/ic_camera_icon"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    />
+            </RelativeLayout>
+
 
 
             <!--description-->
@@ -71,12 +115,12 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/iv_coverphoto_slide"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout_setting"
                 app:layout_constraintLeft_toLeftOf="parent"
                 />
 
             <EditText
-                android:id="@+id/et_description"
+                android:id="@+id/et_description_con"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
@@ -100,11 +144,11 @@
                 android:layout_marginTop="20dp"
                 android:text="Cover Photos"
                 android:textColor="@color/primary_dark"
-                app:layout_constraintTop_toBottomOf="@+id/et_description"
+                app:layout_constraintTop_toBottomOf="@+id/et_description_con"
                 app:layout_constraintLeft_toLeftOf="parent"
                 />
 
-            <GridView
+           <!-- <GridView
                 android:id="@+id/gvCoverPhotos_edit_cover"
                 android:layout_width="match_parent"
                 android:layout_marginTop="10dp"
@@ -114,7 +158,15 @@
                 android:listSelector="@drawable/grid_view_background"
                 app:layout_constraintTop_toBottomOf="@+id/tv_cover_photo"
                 app:layout_constraintLeft_toLeftOf="parent"
-                />
+                />-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCoverPhotos"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:listSelector="@drawable/grid_view_background"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_cover_photo"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
 
             <!--notice-->
 
@@ -129,7 +181,7 @@
                     android:layout_marginTop="20dp"
                     android:textColor="@color/white"
                     android:background="@drawable/bg_circle_gold"
-                    app:layout_constraintTop_toBottomOf="@+id/gvCoverPhotos_edit_cover"
+                    app:layout_constraintTop_toBottomOf="@+id/rvCoverPhotos"
                     app:layout_constraintLeft_toLeftOf="parent"
                     />
 

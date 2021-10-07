@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tt.ui.activities.MotionStartActivity"
+    motion:layoutDescription="@xml/activity_motion_start_scene">
+
+    <ImageView
+        android:id="@+id/left_star"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_whitestar_24"
+        />
+
+    <ImageView
+        android:id="@+id/right_star"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_whitestar_24"
+        />
+
+    <ImageView
+        android:id="@+id/red_star"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_redstar_24"
+    />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifimg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/animated_love_image"
+        motion:layout_constraintBottom_toBottomOf="parent"
+        motion:layout_constraintTop_toTopOf="parent" />
+   <!-- <TextView
+        android:id="@+id/credits"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        motion:layout_constraintEnd_toEndOf="parent"
+        motion:layout_constraintTop_toTopOf="parent" />-->
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

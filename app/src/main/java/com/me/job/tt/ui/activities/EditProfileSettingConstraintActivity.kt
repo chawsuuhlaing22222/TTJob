@@ -1,18 +1,12 @@
 package com.me.job.tt.ui.activities
 
-import android.Manifest
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.location.Location
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -22,32 +16,26 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.me.job.BuildConfig.MAPS_API_KEY
+
 import com.me.job.R
-import com.me.job.tt.data.remote.request.FoundNameUpdateRequest
-import com.me.job.tt.data.remote.request.FoundWebsiteUpdateRequest
-import com.me.job.tt.data.remote.request.FoundationInfoRequest
-import com.me.job.tt.data.remote.request.FoundationProfileBasicInfo
+import com.me.job.tt.data.remote.request.*
 import com.me.job.tt.data.remote.response.FoundationDataResponse
 import com.me.job.tt.ui.adapters.ImageSliderAdapter
-import com.me.job.tt.utils.AppConstants
+import com.me.job.tt.utils.AppConstants.Companion.MAPS_API_KEY
 import com.me.job.tt.viewModels.FoundationInfoViewModel
-import com.smarteist.autoimageslider.SliderView
 import kotlinx.android.synthetic.main.activity_edit_profile.*
-import kotlinx.android.synthetic.main.activity_edit_profile.btn_basic_info_edit
 import kotlinx.android.synthetic.main.activity_edit_profile.iv_edit_cover_photo
-import kotlinx.android.synthetic.main.activity_edit_profile.iv_toolbar_back_arrow
-import kotlinx.android.synthetic.main.activity_edit_profile.tv_website_link_value
 import kotlinx.android.synthetic.main.activity_edit_profile_setting_constraint.*
 
 class EditProfileSettingConstraintActivity : BaseActivity(),
     GoogleMap.OnMyLocationButtonClickListener, ActivityCompat.OnRequestPermissionsResultCallback,
-    GoogleMap.OnMyLocationClickListener,OnMapReadyCallback {
+    GoogleMap.OnMyLocationClickListener,OnMapReadyCallback,GoogleMap.OnMapClickListener {
 
     private lateinit var foundationInfoViewModel: FoundationInfoViewModel
     var foundationProfileBasicInfo: FoundationProfileBasicInfo?=null
     var foundationNameUpdateRequest: FoundNameUpdateRequest?=null
     var foundationWebsiteUpdateReq: FoundWebsiteUpdateRequest?=null
+    lateinit var themecoverPhotoUpdateRequest:ThemeCoverPhotoUpdateRequest
     //location
     //lateinit var location:String
     lateinit var mapview:MapView
@@ -85,7 +73,10 @@ class EditProfileSettingConstraintActivity : BaseActivity(),
         iv_edit_cover_photo.setOnClickListener {
            //]
              startActivity(Intent(this,EditCoverPhotoActivity::class.java))
-           //  startActivity(Intent(this,EditCoverPhotoUploadConstraintActivity::class.java))
+
+          /* var intent=Intent(this,FoundationEditCoverPhotoUploadActivity::class.java)
+            intent.putExtra("themeobject",themecoverPhotoUpdateRequest)
+            startActivity(intent)*/
         }
 
         //back pressed
@@ -118,6 +109,9 @@ class EditProfileSettingConstraintActivity : BaseActivity(),
             i.putExtra("foudWebsiteUpdateRequest",foundationWebsiteUpdateReq)
             startActivity(i)
         }
+
+
+
     }
 
 
@@ -180,28 +174,29 @@ class EditProfileSettingConstraintActivity : BaseActivity(),
                     BitmapDescriptorFactory
                     .defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         )
-        mMap.uiSettings.isZoomControlsEnabled=true
+       /* mMap.uiSettings.isZoomControlsEnabled=true
         mMap.uiSettings.isZoomGesturesEnabled=true
         mMap.uiSettings.isCompassEnabled=true
         mMap.uiSettings.isMapToolbarEnabled=true
         mMap.uiSettings.isScrollGesturesEnabled=true
         mMap.uiSettings.isTiltGesturesEnabled=true
         mMap.uiSettings.isRotateGesturesEnabled=true
-          /* if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-               == PackageManager.PERMISSION_GRANTED) {
-               mMap.isMyLocationEnabled = true
-           } else {
-               // Permission to access the location is missing. Show rationale and request permission
-               requestPermission(this, LOCATION_PERMISSION_REQUEST_CODE,
-                   Manifest.permission.ACCESS_FINE_LOCATION, true
-               )
-           }*/
+
 
         mMap.setOnMyLocationButtonClickListener(this)
-        mMap.setOnMyLocationClickListener(this)
+        mMap.setOnMyLocationClickListener(this)*/
 
         //this is for zoom level and to appear marker
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location, 10.0f));
+
+
+          mMap.setOnMapClickListener {
+
+              var intent=Intent(this,UpdateMapsActivity::class.java)
+              intent.putExtra("map",
+                 location)
+              startActivity(intent)
+          }
     }
 
 
@@ -254,6 +249,9 @@ class EditProfileSettingConstraintActivity : BaseActivity(),
                     it.website)
 
                 foundationNameUpdateRequest= FoundNameUpdateRequest(it.id,it.name)
+
+                themecoverPhotoUpdateRequest=
+                    ThemeCoverPhotoUpdateRequest(it.id,it.userid,it.theme,it.foundation_photos)
 
             }
           /*  foundationProfileBasicInfo= FoundationProfileBasicInfo(
@@ -341,6 +339,12 @@ class EditProfileSettingConstraintActivity : BaseActivity(),
         sl_cover_photo_list.setSliderAdapter(adapter)
        sl_cover_photo_list.isAutoCycle = true
        sl_cover_photo_list.startAutoCycle()
+    }
+
+    override fun onMapClick(p0: LatLng) {
+
+
+        startActivity(Intent(this,UpdateMapsActivity::class.java))
     }
 
 

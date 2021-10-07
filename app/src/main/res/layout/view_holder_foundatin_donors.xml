@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_medium"
+    android:layout_marginTop="@dimen/margin_medium"
+    android:layout_marginEnd="@dimen/margin_medium"
+    android:layout_marginBottom="@dimen/margin_medium">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="130dp">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/black"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_medium_2"
+                android:paddingRight="@dimen/margin_medium_2">
+
+            <ImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:padding="2dp"
+                    android:background="@drawable/bg_square_border_orange"
+                    android:src="@drawable/camera_placeholder" />
+
+            <TextView
+                    android:id="@+id/tvMember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivProfile"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold"
+                    tools:text="TextView" />
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold"
+                    tools:text="Aung San Nway Oo" />
+
+            <TextView
+                    android:id="@+id/tvamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold"
+                    tools:text="50000 MMK" />
+
+            <TextView
+                    android:id="@+id/tvdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvamount"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:gravity="center_horizontal"
+                    android:maxLines="3"
+                    android:textAlignment="viewStart"
+                    tools:text="Desc" />
+
+            <RelativeLayout
+                    android:id="@+id/rlacceptreject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvdesc"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:gravity="end"
+                    android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btaccept"
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/margin_medium_2"
+                        android:background="@drawable/bg_rounded_bt_green"
+                        android:text="Accept"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnreject"
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:layout_toRightOf="@+id/btaccept"
+                        android:background="@drawable/bt_rounded_reject"
+                        android:text="Reject"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
