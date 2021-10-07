@@ -24,6 +24,12 @@ class AppConstants {
         const val FOUNDATION_PROFILE_NAME_UPDATE=""
         const val FOUNDATION_PROFILE_COVER_PHOTO_UPDATE="foundation/profile/update/cover/photos"
         const val MY_KEY="AIzaSyBw2ULcqop1_ADRQzui5goiZQSR3y8HG-4"
+        const val EXCHANGE_LIST="purchase/exchangerate/list"
+        const val STOCK_LIST="purchase/item/stock/list/country/B112908A-CCD8-4712-9C36-7D981607030F/page/{page}/count/{count}"
+       // const val PICK_COVER_PHOTO="foundation/cover/photolist/foundationid/223be056-c886-4bed-8205-c587c51d151e/page/{page}/count/{count}"
+
+        const val PICK_COVER_PHOTO="foundation/cover/photolist/foundationid/{foundationid}/page/{page}/count/{count}"
+       const val UPDATE_THEME_COVER_PHOTO="foundation/profile/save/theme/coverphotos/slide"
 
 
         const val LOGIN_URL = "login"
@@ -417,6 +423,11 @@ class AppConstants {
 
         // update comment
         const val UPDATE_COMMENT = "feed/edit/comment/{commentId}/feed/{feedId}"
+
+        const val FOUNDATION_DONATE_LIST =
+            "donationpost/donate/list/foundationid/{foundationid}/donationtype/{donationtype}/status/{status}/page/{pageNo}/count/{countNo}/search?username_amount=null"
+
+        const val MAPS_API_KEY = "AIzaSyBw2ULcqop1_ADRQzui5goiZQSR3y8HG-4"
     }
 
 

@@ -3,28 +3,71 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Job/app/src/main/res/drawable-v24/bg_rounded_bt_green.xml" value="0.1287037037037037" />
+        <entry key="..\:/Job/app/src/main/res/drawable-v24/bg_square_border_orange.xml" value="0.1287037037037037" />
+        <entry key="..\:/Job/app/src/main/res/drawable-v24/bt_rounded_reject.xml" value="0.1287037037037037" />
         <entry key="..\:/Job/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1935185185185185" />
         <entry key="..\:/Job/app/src/main/res/drawable/bg_circle_gold.xml" value="0.18645833333333334" />
         <entry key="..\:/Job/app/src/main/res/drawable/bg_circle_grey.xml" value="0.2015625" />
+        <entry key="..\:/Job/app/src/main/res/drawable/bg_circle_img.xml" value="0.11710526315789474" />
+        <entry key="..\:/Job/app/src/main/res/drawable/btn_rect.xml" value="0.10822368421052632" />
         <entry key="..\:/Job/app/src/main/res/drawable/btnrect.xml" value="0.2015625" />
+        <entry key="..\:/Job/app/src/main/res/drawable/buy_now_bg.xml" value="0.2203125" />
+        <entry key="..\:/Job/app/src/main/res/drawable/framebg.xml" value="0.12927631578947368" />
         <entry key="..\:/Job/app/src/main/res/drawable/grid_view_background.xml" value="0.21203703703703702" />
         <entry key="..\:/Job/app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.1935185185185185" />
+        <entry key="..\:/Job/app/src/main/res/drawable/ic_camera_icon.xml" value="0.11710526315789474" />
+        <entry key="..\:/Job/app/src/main/res/drawable/ic_coin_stack_svgrepo_com.xml" value="0.2203125" />
+        <entry key="..\:/Job/app/src/main/res/drawable/ic_diamond_svgrepo_com.xml" value="0.16111111111111112" />
+        <entry key="..\:/Job/app/src/main/res/drawable/ic_stock_bg.xml" value="0.1326388888888889" />
         <entry key="..\:/Job/app/src/main/res/drawable/myrect.xml" value="0.753125" />
+        <entry key="..\:/Job/app/src/main/res/drawable/search_map_bg.xml" value="0.10888157894736843" />
+        <entry key="..\:/Job/app/src/main/res/drawable/spinner_bg.xml" value="0.2203125" />
+        <entry key="..\:/Job/app/src/main/res/drawable/spinner_drop_down_bg.xml" value="0.1326388888888889" />
+        <entry key="..\:/Job/app/src/main/res/drawable/tab_background.xml" value="0.13402777777777777" />
+        <entry key="..\:/Job/app/src/main/res/drawable/tab_shape.xml" value="0.1326388888888889" />
+        <entry key="..\:/Job/app/src/main/res/drawable/tab_shape_selected.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/drawable/tab_shape_unselected.xml" value="0.1326388888888889" />
+        <entry key="..\:/Job/app/src/main/res/drawable/tab_text_color.xml" value="0.1326388888888889" />
+        <entry key="..\:/Job/app/src/main/res/drawable/tab_text_selected.xml" value="0.1326388888888889" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_basic_information.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/layout/activity_cover_photo_pick.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/layout/activity_cshrecyclar_load_more.xml" value="0.14130434782608695" />
+        <entry key="..\:/Job/app/src/main/res/layout/activity_currency_exchange.xml" value="0.1" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_donation.xml" value="0.19791666666666666" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_donation_name_edit.xml" value="0.1859375" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_edit_cover_photo.xml" value="0.18541666666666667" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_edit_cover_photo_upload_constraint.xml" value="0.1" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_edit_profile.xml" value="0.18854166666666666" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_edit_profile_setting_constraint.xml" value="0.1" />
-        <entry key="..\:/Job/app/src/main/res/layout/activity_main.xml" value="0.19791666666666666" />
+        <entry key="..\:/Job/app/src/main/res/layout/activity_image_click_motion.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/layout/activity_motion_layout.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/layout/activity_motion_start.xml" value="0.11019736842105263" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_recyclar_viewactivity.xml" value="0.1296875" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_setting.xml" value="0.161231884057971" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_shared_ref_test.xml" value="0.17300724637681159" />
+        <entry key="..\:/Job/app/src/main/res/layout/activity_update_maps.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/layout/activity_view_pager2.xml" value="0.14221014492753623" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_website_edit.xml" value="0.1859375" />
+        <entry key="..\:/Job/app/src/main/res/layout/currency_exchange_list.xml" value="0.1403985507246377" />
+        <entry key="..\:/Job/app/src/main/res/layout/currency_list.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/layout/fragment_currency.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/layout/fragment_foundation_about.xml" value="0.1526268115942029" />
+        <entry key="..\:/Job/app/src/main/res/layout/fragment_foundation_photo.xml" value="0.1" />
         <entry key="..\:/Job/app/src/main/res/layout/image_entry.xml" value="0.18541666666666667" />
+        <entry key="..\:/Job/app/src/main/res/layout/item_load_more_holder.xml" value="0.14130434782608695" />
+        <entry key="..\:/Job/app/src/main/res/layout/pickcoverphoto_entry.xml" value="0.1" />
         <entry key="..\:/Job/app/src/main/res/layout/recyclar_view_layout.xml" value="0.1296875" />
         <entry key="..\:/Job/app/src/main/res/layout/slider_image.xml" value="0.16802536231884058" />
+        <entry key="..\:/Job/app/src/main/res/layout/spinner_drop_down.xml" value="0.1472663139329806" />
+        <entry key="..\:/Job/app/src/main/res/layout/spinner_layout.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/layout/view_coin_holder.xml" value="0.18885869565217392" />
+        <entry key="..\:/Job/app/src/main/res/layout/view_gem_holder.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/layout/view_gem_recycler_holder.xml" value="0.13451086956521738" />
+        <entry key="..\:/Job/app/src/main/res/layout/view_holder_foundatin_donors.xml" value="0.14130434782608695" />
+        <entry key="..\:/Job/app/src/main/res/layout/view_item_foundation_photo.xml" value="0.1526268115942029" />
+        <entry key="..\:/Job/app/src/main/res/layout/view_item_foundation_video.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -1,30 +1,5 @@
 package com.me.job.tt.ui.activities
 
-import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
-import com.me.job.R
-import com.me.job.tt.data.remote.request.FoundationInfoRequest
-import com.me.job.tt.data.remote.request.FoundationProfileBasicInfo
-import com.me.job.tt.data.remote.response.FoundationProfileResponse
-import com.me.job.tt.utils.ConfigUtils
-import com.me.job.tt.viewModels.FoundationInfoViewModel
-import kotlinx.android.synthetic.main.activity_donation_name_edit.*
-import kotlinx.android.synthetic.main.activity_edit_cover_photo.*
-import kotlinx.android.synthetic.main.activity_edit_profile.*
-import kotlinx.android.synthetic.main.activity_edit_profile.iv_edit_cover_photo
-import kotlinx.android.synthetic.main.activity_edit_profile.iv_toolbar_back_arrow
-import android.content.SharedPreferences
-import com.me.job.tt.data.remote.request.FoundNameUpdateRequest
-import com.me.job.tt.data.remote.request.FoundWebsiteUpdateRequest
-import com.me.job.tt.data.remote.response.FoundationDataResponse
-
 
 class EditProfileActivity : BaseActivity() {
 /*

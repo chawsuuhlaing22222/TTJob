@@ -2,13 +2,11 @@ package com.me.job.tt.models
 
 import androidx.lifecycle.MutableLiveData
 import com.me.job.tt.data.remote.request.*
-import com.me.job.tt.data.remote.response.FoundProfCoverPhoUpdateResponse
-import com.me.job.tt.data.remote.response.FoundationBasicInfoUpdateResponse
-import com.me.job.tt.data.remote.response.FoundationDataResponse
-import com.me.job.tt.data.remote.response.FoundationProfileResponse
+import com.me.job.tt.data.remote.response.*
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import retrofit2.http.Path
 
 class JobModel :BaseModel() {
 
@@ -110,7 +108,7 @@ class JobModel :BaseModel() {
 
     fun updateFoProfileCoverPhoto(
         request: FoundCoverPhotoUpdateRequest,
-        responseLD: MutableLiveData<FoundProfCoverPhoUpdateResponse>,
+        responseLD: MutableLiveData<CoverPhotoListResponse>,
         errorLd: MutableLiveData<String>
     ): Disposable {
         // val authToken = ConfigUtils.getInstance().loadAuthToken()
@@ -128,5 +126,107 @@ class JobModel :BaseModel() {
             )
 
     }
+
+    //Foundation Donor List
+    fun foundationDonorList(
+        foundationId: String,
+        page: Int,
+        pageCount: Int,
+        responseLD: MutableLiveData<FoundationDonors>,
+        errorLd: MutableLiveData<String>
+    ): Disposable {
+        return mApiService.foundationDonorList(foundationId, page, pageCount)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                responseLD.value = it
+            },
+                {
+                    errorLd.value = it.localizedMessage
+                }
+            )
+    }
+
+    //currency exchange List
+    fun getCurrencyExchangeList(
+        responseLD: MutableLiveData<CurrencyExchangeListResponse>,
+        errorLd: MutableLiveData<String>
+    ): Disposable {
+        return mApiService.getCurrencyExchangeList()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                responseLD.value = it
+            },
+                {
+                    errorLd.value = it.localizedMessage
+                }
+            )
+    }
+
+    //currency exchange List
+    fun getStockList(
+        page: Int,
+        countNo: Int,
+        responseLD: MutableLiveData<StockListResponse>,
+        errorLd: MutableLiveData<String>
+    ): Disposable {
+        return mApiService.getStockList(page,countNo)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                responseLD.value = it
+            },
+                {
+                    errorLd.value = it.localizedMessage
+                }
+            )
+    }
+
+
+    //get cover photo List
+    fun getCoverPhotoList(
+        foundationid: String,
+        pageNo: Int,
+        countNo: Int,
+        responseLD: MutableLiveData<CoverPhotoListResponse>,
+        errorLd: MutableLiveData<String>
+    ): Disposable {
+        return mApiService.getCoverPhotoList(foundationid,pageNo,countNo)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                responseLD.value = it
+            },
+                {
+                    errorLd.value = it.localizedMessage
+                }
+            )
+    }
+
+
+    //update theme cover photo
+    fun updateThemeCoverPhoto(
+        request: ThemeCoverPhotoUpdateRequest,
+        responseLD: MutableLiveData<FoundationDataResponse>,
+        errorLd: MutableLiveData<String>
+    ): Disposable {
+        // val authToken = ConfigUtils.getInstance().loadAuthToken()
+        return mApiService.updateThemeCoverPhoto(
+            request
+        )
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(
+                {
+                    responseLD.value = it
+                }, {
+                    errorLd.value = it.localizedMessage
+                }
+            )
+
+    }
+
+
 
 }

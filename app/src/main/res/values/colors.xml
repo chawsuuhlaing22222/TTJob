@@ -66,6 +66,9 @@
     <color name="comment_background_color">#EFEFEF</color>
 
 
-
+    <color name="accept_bt">#14AE1A</color>
     <color name="menu_color">#FFA90A</color>
+    <color name="gold">#FFD700</color>
+
+    <color name="currency_background">#AAAAE5</color>
 </resources>

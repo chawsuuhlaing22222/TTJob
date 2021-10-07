@@ -2,7 +2,6 @@ package com.me.job.tt.ui.activities
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.me.job.R
 import com.me.job.tt.utils.ConfigUtils
@@ -25,8 +24,8 @@ class SharedRefTestActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_ref_test)
 
-        ConfigUtils.initConfigUtils(this)
-        var datalis=ConfigUtils.getInstance().getFoundationProfileBasicInfoList()
-        tv_sharedRe_list.text = datalis?.size.toString()
+       // ConfigUtils.initConfigUtils(this)
+       // var datalis=ConfigUtils.getInstance().getFoundationProfileBasicInfoList()
+        //tv_sharedRe_list.text = datalis?.size.toString()
     }
 }
