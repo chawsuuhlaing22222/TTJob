@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".tt.ui.activities.Csh2BranchActivity">
 
+    <TextView
+        android:id="@+id/tv_csh2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CSH2"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
