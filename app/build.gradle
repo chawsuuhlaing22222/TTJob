@@ -129,4 +129,7 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta7"
 
     implementation "pl.droidsonroids.gif:android-gif-drawable:1.2.20"
+
+    //csh2branch
+    implementation 'com.google.maps.android:maps-ktx:2.3.0'
 }

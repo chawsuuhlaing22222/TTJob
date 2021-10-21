@@ -26,6 +26,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Job">
         <activity
+            android:name=".tt.ui.activities.Csh2BranchActivity"
+            android:exported="true" />
+        <activity
             android:name=".tt.ui.activities.MotionStartActivity"
             android:exported="true" />
         <activity
