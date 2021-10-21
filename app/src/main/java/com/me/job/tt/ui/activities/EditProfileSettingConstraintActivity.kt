@@ -72,11 +72,11 @@ class EditProfileSettingConstraintActivity : BaseActivity(),
         //edit image view function
         iv_edit_cover_photo.setOnClickListener {
            //]
-             startActivity(Intent(this,EditCoverPhotoActivity::class.java))
+           //  startActivity(Intent(this,EditCoverPhotoActivity::class.java))
 
-          /* var intent=Intent(this,FoundationEditCoverPhotoUploadActivity::class.java)
+           var intent=Intent(this,FoundationEditCoverPhotoUploadActivity::class.java)
             intent.putExtra("themeobject",themecoverPhotoUpdateRequest)
-            startActivity(intent)*/
+            startActivity(intent)
         }
 
         //back pressed
@@ -160,7 +160,6 @@ class EditProfileSettingConstraintActivity : BaseActivity(),
 
 
       override fun onMapReady(googleMap: GoogleMap) {
-
 
         var mMap = googleMap
 

@@ -9,6 +9,7 @@ import android.provider.MediaStore
 import android.util.Base64
 import android.util.Log
 import android.view.View
+import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
@@ -64,7 +65,7 @@ class CoverPhotoPickActivity : BaseActivity(),PickCoverPhotoDelegate {
         observe()
         observeupdate()
         //action of btn_new click
-        btn_new.setOnClickListener {
+       btn_new.setOnClickListener {
               pickFromFile()
 
         }
@@ -78,6 +79,30 @@ class CoverPhotoPickActivity : BaseActivity(),PickCoverPhotoDelegate {
 
         }
 
+        iv_menu.setOnClickListener {
+
+            var popupMenu = PopupMenu(this,it)
+            popupMenu.menuInflater.inflate(R.menu.pick_coverphoto_menu,popupMenu.menu)
+            popupMenu.setOnMenuItemClickListener{ it->
+                   when(it.itemId){
+                       R.id.btn_new->{
+                           pickFromFile()
+                       }
+
+                       R.id.btn_select->{
+
+                       }
+                   }
+
+                   true
+
+               }
+
+            popupMenu.show()
+
+
+        }
+
 
     }
 
@@ -85,6 +110,8 @@ class CoverPhotoPickActivity : BaseActivity(),PickCoverPhotoDelegate {
     fun getCoverPhoto(fId:String,page:Int,count:Int){
         foundationInfoViewModel.getCoverPhotoList(fId,page,count)
     }
+
+
 
     //observe
    fun observe(){
@@ -136,9 +163,36 @@ class CoverPhotoPickActivity : BaseActivity(),PickCoverPhotoDelegate {
 
         requestPhotoList=ArrayList<UpdatePhoto>()
 
-        if (requestCode === REQUEST_PICK_FILE_MM && resultCode === RESULT_OK){
+     if (requestCode === REQUEST_PICK_FILE_MM && resultCode === RESULT_OK){
+        if(data?.clipData != null){   //for multiple images selected
 
-             if(data?.data != null){    //for single image selected
+            var count: Int = data?.clipData.itemCount//.getItemCount()
+
+            for (i in 0 until count){
+                //taking selected data uri
+                val imageUri: Uri = data?.clipData.getItemAt(i).uri
+                var extension=contentResolver.getType(imageUri)
+                var imageName=imageUri.pathSegments.last()
+                Log.i("filename",imageName)
+                Log.i("fileext",extension)
+
+                var imgBitmap:Bitmap=
+                    MediaStore.Images.Media.getBitmap(contentResolver, imageUri)
+
+                //bitmap to base 64
+                //changing bitmap to url
+                var img_base64=encodeImage(imgBitmap)
+
+                //assigning bitmap to coverPhoto that is add arraylist
+                requestPhotoList.add(UpdatePhoto(imageName,img_base64,extension))
+            }
+            /*getFoundationCoverPhotoUpdateResponse(
+                FoundCoverPhotoUpdateRequest(
+                    "2422ae8f-90fd-4f7c-b2e7-76155deb3720",
+                        requestPhotoList))*/
+
+
+        }else if(data?.data != null){    //for single image selected
 
                 val selectedImageUri: Uri = data?.data
                 var extension=contentResolver.getType(selectedImageUri)
@@ -157,45 +211,17 @@ class CoverPhotoPickActivity : BaseActivity(),PickCoverPhotoDelegate {
                         requestPhotoList))*/
                 //  observeupdate()
 
-            }else if(data?.clipData != null){   //for multiple images selected
-
-                var count: Int = data?.clipData.itemCount//.getItemCount()
-
-                    for (i in 0 until count){
-                        //taking selected data uri
-                        val imageUri: Uri = data?.clipData.getItemAt(i).uri
-                        var extension=contentResolver.getType(imageUri)
-                        var imageName=imageUri.pathSegments.last()
-                        Log.i("filename",imageName)
-                        Log.i("fileext",extension)
-
-                        var imgBitmap:Bitmap=
-                            MediaStore.Images.Media.getBitmap(contentResolver, imageUri)
-
-                        //bitmap to base 64
-                        //changing bitmap to url
-                        var img_base64=encodeImage(imgBitmap)
-
-                        //assigning bitmap to coverPhoto that is add arraylist
-                        requestPhotoList.add(UpdatePhoto(imageName,img_base64,extension))
-                    }
-                        /*getFoundationCoverPhotoUpdateResponse(
-                            FoundCoverPhotoUpdateRequest(
-                                "2422ae8f-90fd-4f7c-b2e7-76155deb3720",
-                                    requestPhotoList))*/
-
-
-                }
-
-            for(i in requestPhotoList){
-                Log.i("imgname",i.photo_name)
-                Log.i("ext",i.photo_extension)
             }
-            getFoundationCoverPhotoUpdateResponse(
-                FoundCoverPhotoUpdateRequest(
-                    "2422ae8f-90fd-4f7c-b2e7-76155deb3720",
-                    requestPhotoList))
+
+     }
+        for(i in requestPhotoList){
+            Log.i("imgname",i.photo_name)
+            Log.i("ext",i.photo_extension)
         }
+        getFoundationCoverPhotoUpdateResponse(
+            FoundCoverPhotoUpdateRequest(
+                "2422ae8f-90fd-4f7c-b2e7-76155deb3720",
+                requestPhotoList))
 
 
     }

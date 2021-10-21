@@ -129,7 +129,8 @@ class FoundationEditCoverPhotoUploadActivity : BaseActivity(), EditCoverPhotoDel
             MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
         intent.action = Intent.ACTION_GET_CONTENT
-        startActivityForResult(Intent(this,CoverPhotoPickActivity::class.java),REQUEST_PICK_ACCOUNT)
+        //startActivityForResult(Intent(this,CoverPhotoPickActivity::class.java),REQUEST_PICK_ACCOUNT)
+        startActivityForResult(Intent(this,CoverPhotoPickSwipeActivity::class.java),REQUEST_PICK_ACCOUNT)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

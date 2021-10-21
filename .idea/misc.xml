@@ -19,6 +19,7 @@
         <entry key="..\:/Job/app/src/main/res/drawable/ic_camera_icon.xml" value="0.11710526315789474" />
         <entry key="..\:/Job/app/src/main/res/drawable/ic_coin_stack_svgrepo_com.xml" value="0.2203125" />
         <entry key="..\:/Job/app/src/main/res/drawable/ic_diamond_svgrepo_com.xml" value="0.16111111111111112" />
+        <entry key="..\:/Job/app/src/main/res/drawable/ic_more_vert_gray_24dp.xml" value="0.10972222222222222" />
         <entry key="..\:/Job/app/src/main/res/drawable/ic_stock_bg.xml" value="0.1326388888888889" />
         <entry key="..\:/Job/app/src/main/res/drawable/myrect.xml" value="0.753125" />
         <entry key="..\:/Job/app/src/main/res/drawable/search_map_bg.xml" value="0.10888157894736843" />
@@ -32,6 +33,7 @@
         <entry key="..\:/Job/app/src/main/res/drawable/tab_text_selected.xml" value="0.1326388888888889" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_basic_information.xml" value="0.1" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_cover_photo_pick.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/layout/activity_cover_photo_pick_swipe.xml" value="0.10526315789473684" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_cshrecyclar_load_more.xml" value="0.14130434782608695" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_currency_exchange.xml" value="0.1" />
         <entry key="..\:/Job/app/src/main/res/layout/activity_donation.xml" value="0.19791666666666666" />
@@ -68,6 +70,8 @@
         <entry key="..\:/Job/app/src/main/res/layout/view_holder_foundatin_donors.xml" value="0.14130434782608695" />
         <entry key="..\:/Job/app/src/main/res/layout/view_item_foundation_photo.xml" value="0.1526268115942029" />
         <entry key="..\:/Job/app/src/main/res/layout/view_item_foundation_video.xml" value="0.1" />
+        <entry key="..\:/Job/app/src/main/res/layout/view_item_loading.xml" value="0.10592105263157894" />
+        <entry key="..\:/Job/app/src/main/res/menu/pick_coverphoto_menu.xml" value="0.10592105263157894" />
       </map>
     </option>
   </component>
