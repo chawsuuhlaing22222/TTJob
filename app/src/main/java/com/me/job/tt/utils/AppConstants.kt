@@ -428,6 +428,8 @@ class AppConstants {
             "donationpost/donate/list/foundationid/{foundationid}/donationtype/{donationtype}/status/{status}/page/{pageNo}/count/{countNo}/search?username_amount=null"
 
         const val MAPS_API_KEY = "AIzaSyBw2ULcqop1_ADRQzui5goiZQSR3y8HG-4"
+
+        const val JOB_SENDBIRD_API="5FEA5540-5669-4E6F-9EDE-CB6013C87E3D"
     }
 
 

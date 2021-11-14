@@ -17,17 +17,31 @@
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
-        <Constraint android:id="@id/tvHelloWorld">
+        <Constraint android:id="@id/tvHelloWorld" android:visibility="gone">
             <CustomAttribute app:attributeName="textColor"
                 app:customColorValue="@color/white"/>
+            <CustomAttribute app:attributeName="layout_height" app:customDimension="0dp" />
         </Constraint>
+
+
         <Constraint
             android:id="@id/swipeLayout"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+        <Constraint
+            android:id="@id/textViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"/>
+
+        <Constraint android:id="@id/tv_new">
+            <PropertySet android:visibility="visible"
+                app:visibilityMode="normal"/>
+
+        </Constraint>
+
     </ConstraintSet>
 
     <Transition

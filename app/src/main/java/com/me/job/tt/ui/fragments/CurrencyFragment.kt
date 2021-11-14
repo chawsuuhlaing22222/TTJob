@@ -195,6 +195,7 @@ class CurrencyFragment : BaseFragment(), CurrencyFragmentDelegate, ChildGemDeleg
                     spinnerAdapter= SpinnerDropDownAdapter(requireContext(),it)
                     mView.spinner.adapter= spinnerAdapter
 
+
                    /* val arrayAdapter: ArrayAdapter<CurrencyExchangeData> =  ArrayAdapter(activity,
                         com.me.job.R.layout.spinner_layout,it)
 

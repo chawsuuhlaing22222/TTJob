@@ -46,6 +46,7 @@ class SpinnerDropDownAdapter(var context: Context,var data:List<CurrencyExchange
             view = inflater.inflate(R.layout.spinner_drop_down, parent, false)
             vh = ItemHolder(view)
             view?.tag = vh
+
         } else {
             view = convertView
             vh = view.tag as ItemHolder

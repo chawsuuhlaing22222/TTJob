@@ -136,4 +136,71 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_motiontest"
         />
+
+    <Button
+        android:id="@+id/btn_collapsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="558dp"
+        android:text="Collapsed mode"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_motiontest1"
+        />
+
+    <Button
+        android:id="@+id/btn_collapsed2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="558dp"
+        android:text="Collapsed mode2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_collapsed"
+        />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_collapsed2"/>
+
+    <TextView
+        android:id="@+id/tv_date2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date"/>
+
+    <Button
+        android:id="@+id/btn_cover2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="558dp"
+        android:text="Cover Gery layer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_collapsed2"
+        />
+
+    <Button
+        android:id="@+id/btn_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="558dp"
+        android:text="Chat List"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cover2"
+        />
+<PhotoView>
+
+</PhotoView>
 </androidx.constraintlayout.widget.ConstraintLayout>

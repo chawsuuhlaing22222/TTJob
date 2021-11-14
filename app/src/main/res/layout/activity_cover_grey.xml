@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tt.ui.activities.CoverGreyActivity">
+
+<FrameLayout
+    android:id="@+id/ff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:src="@drawable/unnamed"
+        android:scaleType="fitXY"
+        android:foreground="@drawable/linear_gradient"
+        android:layout_height="match_parent"/>
+
+
+</FrameLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:text=""
+            android:layout_width="250dp"
+            android:maxLines="1"
+            android:maxLength="33"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ff"
+            tools:ignore="MissingConstraints" />
+
+        <!--android:shadowColor="#55000000"
+         android:shadowColor="@color/black"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="3"-->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
